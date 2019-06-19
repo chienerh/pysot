@@ -108,7 +108,6 @@ def main():
                               (0, 255, 0), 3)
                 x1, y1, x2, y2 = bbox[0], bbox[1], bbox[0]+bbox[2], bbox[1]+bbox[3]
                 frame_output = np.zeros_like(frame)
-                roi = frame[y1:y2, x1:x2]
                 frame_output[y1:y2, x1:x2] = 255
                 final_frame = cv2.hconcat((frame_output, frame_showing))
             
